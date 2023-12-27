@@ -1,0 +1,45 @@
+@import "@/app/styles/variables.scss";
+
+.inputContainer {
+  position: absolute;
+}
+
+.input {
+  border: 2px solid $gray-color1;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+  z-index: 2;
+
+  &:focus {
+    border-color: $primary-color;
+  }
+
+  &:hover:not(:focus) {
+    border-color: $gray-color2;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+  text-align: center;
+  font-family: $primary-font;
+  background-color: $secondary-color;
+  color: $gray-color2;
+  user-select: none;
+
+  &.labelFocused {
+    top: 0px;
+    left: 10px;
+    font-size: $primary-font-size;
+    padding-right: 3px;
+    padding-left: 3px;
+    height: 15px;
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,12 @@
+
+@import "@/app/styles/mixin.scss";
+
+.container {
+  @include flex-styles;
+  justify-content: center;
+  margin: 50px 20px;
+}
+
+.textField {
+  padding: 50px 20px;
+}
